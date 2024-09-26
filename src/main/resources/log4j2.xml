@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}] %-5p: %c - %m%n"/>
+        </Console>
+    </Appenders>
+    
+    <Loggers>
+        <Logger name="com.test.community" level="debug"/>
+        
+        <!-- Spring 관련 로거 설정 -->
+        <Logger name="org.springframework.core" level="debug"/>
+        <Logger name="org.springframework.beans" level="debug"/>
+        <Logger name="org.springframework.context" level="debug"/>
+        <Logger name="org.springframework.web" level="debug"/>
+        <Logger name="org.springframework.transaction" level="debug"/>
+        
+        <Root level="warn">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
